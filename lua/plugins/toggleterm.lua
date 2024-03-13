@@ -29,13 +29,6 @@ function _G.configure_toggleterm()
         float_opts = {
             border = "single",
         },
-        on_open = function(term)
-            vim.cmd("startinsert!")
-            vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
-        end,
-        on_close = function()
-            vim.cmd("startinsert!")
-        end
     })
 
     -- Shortcuts to open terminals
@@ -50,6 +43,6 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     opts = {
-        open_mapping = [[<C-\>]],
+        open_mapping = [[<C-t>]],
     },
 }
