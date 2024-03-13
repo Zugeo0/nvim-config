@@ -37,7 +37,7 @@ function _G.configure_toggleterm()
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-vim.cmd("autocmd! User LazyDone lua configure_toggleterm()")
+vim.cmd("autocmd User LazyDone lua configure_toggleterm()")
 
 return {
     "akinsho/toggleterm.nvim",
