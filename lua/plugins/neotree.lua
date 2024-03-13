@@ -15,6 +15,12 @@ return {
             window = {
                 width = 30
             },
+            filesystem = {
+                follow_current_file = {
+                    enabled = true,
+                    leave_dirs_open = false,
+                },
+            },
         })
     end,
 }
