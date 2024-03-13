@@ -5,10 +5,16 @@ function _G.set_terminal_keymaps()
     vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 
     -- Move between windows
-    vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-    vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-    vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-    vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+    -- vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+    -- vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+    -- vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+    -- vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+
+    -- Move between windows
+	vim.keymap.set("t", "<c-h>", "<cmd>TmuxNavigateLeft<cr>", opts)
+	vim.keymap.set("t", "<c-j>", "<cmd>TmuxNavigateDown<cr>", opts)
+	vim.keymap.set("t", "<c-k>", "<cmd>TmuxNavigateUp<cr>", opts)
+	vim.keymap.set("t", "<c-l>", "<cmd>TmuxNavigateRight<cr>", opts)
 
     -- Idk
     vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
