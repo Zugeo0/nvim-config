@@ -2,7 +2,7 @@
 function _G.set_terminal_keymaps()
     local opts = {buffer = 0}
     -- Enter normal mode in terminal
-    vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+    -- vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 
     -- Move between windows
     -- vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
