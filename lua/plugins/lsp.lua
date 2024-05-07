@@ -16,6 +16,10 @@ return {
 					"gopls",
 					"pyright",
                     "omnisharp",
+                    "gdtoolkit",
+                    "tailwindcss",
+                    "svelte",
+                    "emmet_ls",
 				},
 			})
 		end,
@@ -32,6 +36,13 @@ return {
 			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
+            lspconfig.gdscript.setup({ capabilities = capabilities })
+            lspconfig.tailwindcss.setup({ capabilities = capabilities })
+            lspconfig.svelte.setup({ capabilities = capabilities })
+            lspconfig.emmet_ls.setup({
+                capabilities = capabilities,
+                filetypes = { "css", "html", "javascript", "svelte", "django-html" }
+            })
             lspconfig.omnisharp.setup({
                 capabilities = capabilities,
                 cmd = { vim.env.MASON .. "/bin/omnisharp" },
