@@ -13,6 +13,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"tsserver",
+					"rust_analyzer",
 					"gopls",
 					"pyright",
                     "omnisharp",
@@ -20,6 +21,7 @@ return {
                     "tailwindcss",
                     "svelte",
                     "emmet_ls",
+                    "cmake_language_server",
 				},
 			})
 		end,
@@ -34,14 +36,17 @@ return {
 			-- Setup language servers
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.tsserver.setup({ capabilities = capabilities })
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
             lspconfig.gdscript.setup({ capabilities = capabilities })
             lspconfig.tailwindcss.setup({ capabilities = capabilities })
             lspconfig.svelte.setup({ capabilities = capabilities })
+            lspconfig.cmake.setup({ capabilities = capabilities })
+            lspconfig.clangd.setup({ capabilities = capabilities })
             lspconfig.emmet_ls.setup({
                 capabilities = capabilities,
-                filetypes = { "css", "html", "javascript", "svelte", "django-html" }
+                filetypes = { "css", "html", "javascript", "svelte", "htmldjango" }
             })
             lspconfig.omnisharp.setup({
                 capabilities = capabilities,
