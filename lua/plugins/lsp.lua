@@ -40,6 +40,7 @@ return {
 			lspconfig.gopls.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
             lspconfig.gdscript.setup({ capabilities = capabilities })
+            lspconfig.zls.setup({ capabilities = capabilities })
             lspconfig.tailwindcss.setup({ capabilities = capabilities })
             lspconfig.svelte.setup({ capabilities = capabilities })
             lspconfig.cmake.setup({ capabilities = capabilities })
